@@ -7,19 +7,38 @@ var reporter = new HtmlScreenshotReporter({
   filename: 'my-report.html'
 });
 
-exports.config = {
+exports.config = 
+{
   directConnect: true,
 
   // Capabilities to be passed to the webdriver instance.
-  capabilities: {
+  capabilities: 
+  {
     'browserName': 'chrome'
   },
+ 
+  /*
+  multiCapabilities: [{
+    'browserName': 'firefox'
+  }, {
+    'browserName': 'chrome'
+  }],
+  */
+
   // Framework to use. Jasmine is recommended.
   framework: 'jasmine',
 
-  // Spec patterns are relative to the current working directory when
-  // protractor is called.
+  // Run specs
   specs: ['../tests/NonAngularApp.js'],
+  //specs: ['../tests/*.js'],
+
+  /*
+  suites:{
+    sanity:'../tests/NonAngularApp.js',
+    regression:['../tests/calculator.js', '../tests/NonAngularApp.js']
+  },
+  */
+
 
   // Options to be passed to Jasmine.
   jasmineNodeOpts: {
@@ -31,6 +50,7 @@ exports.config = {
       reporter.beforeLaunch(resolve);
     });
   },
+
   // Assign the test reporter to each running instance
   onPrepare: function () {
 
