@@ -12,32 +12,35 @@ exports.config =
   directConnect: true,
 
   // Capabilities to be passed to the webdriver instance.
+
   capabilities: 
   {
     'browserName': 'chrome'
   },
  
-  /*
+ 
+   /*
   multiCapabilities: [{
     'browserName': 'firefox'
   }, {
     'browserName': 'chrome'
   }],
   */
+  
 
   // Framework to use. Jasmine is recommended.
   framework: 'jasmine',
 
   // Run specs
-  specs: ['../tests/NonAngularApp.js'],
+  //specs: ['../tests/NonAngularApp.js'],
   //specs: ['../tests/*.js'],
 
-  /*
+ 
   suites:{
     sanity:'../tests/NonAngularApp.js',
     regression:['../tests/calculator.js', '../tests/NonAngularApp.js']
   },
-  */
+ 
 
 
   // Options to be passed to Jasmine.
